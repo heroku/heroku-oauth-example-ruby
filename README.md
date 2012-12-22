@@ -2,6 +2,10 @@
 
 Example Sinatra application using OmniAuth to OAuth against the Heroku API.
 
+## Usage
+
+First, acquire a `localhost:5000` OAuth key/secret pair from the API team. Then:
+
 ```
 $ cat > .env <<EOF
 HEROKU_KEY=...
