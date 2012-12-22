@@ -1,6 +1,6 @@
-# Heroku OAuth Example
+# Heroku OAuth Example: Ruby
 
-Example Sinatra application using OAuth against the Heroku API.
+Example Ruby/Sinatra application using OAuth against the Heroku API.
 
 ## Usage
 
