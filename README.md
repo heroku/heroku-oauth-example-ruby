@@ -1,6 +1,6 @@
 # Heroku OAuth Example
 
-Example Sinatra application using OmniAuth to OAuth against the Heroku API.
+Example Sinatra application using OAuth against the Heroku API.
 
 ## Usage
 
