@@ -8,7 +8,7 @@ require "heroku-api"
 
 use Rack::Session::Cookie, :secret => ENV["COOKIE_SECRET"]
 use OmniAuth::Builder do
-  provider :heroku, ENV["HEROKU_KEY"], ENV["HEROKU_SECRET"]
+  provider :heroku, ENV["HEROKU_ID"], ENV["HEROKU_SECRET"]
 end
 
 get "/" do
