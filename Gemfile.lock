@@ -15,8 +15,6 @@ GEM
     faraday (0.8.4)
       multipart-post (~> 1.1)
     hashie (1.2.0)
-    heroku-api (0.3.7)
-      excon (~> 0.16.10)
     httpauth (0.2.0)
     jwt (0.1.5)
       multi_json (>= 1.0)
@@ -51,7 +49,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  heroku-api
+  excon
+  multi_json
   omniauth-heroku!
   sinatra
   thin

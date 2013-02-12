@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "thin"
-gem "sinatra"
+gem "excon"
+gem "multi_json"
 gem "omniauth-heroku", :github => "wuputah/omniauth-heroku-public"
-gem "heroku-api"
+gem "sinatra"
+gem "thin"
