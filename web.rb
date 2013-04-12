@@ -29,7 +29,8 @@ get "/user" do
     redirect("/")
   else
     api = Excon.new(ENV["HEROKU_API_URL"] || "https://api.heroku.com",
-      headers: { "Authorization" => "Bearer #{session[:heroku_oauth_token]}" })
+      headers: { "Authorization" => "Bearer #{session[:heroku_oauth_token]}" },
+      ssl_verify_peer: ENV["SSL_VERIFY_PEER"] != "false")
     res = api.get(path: "/account", expects: 200)
     user_email = MultiJson.decode(res.body)["email"]
 
