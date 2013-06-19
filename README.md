@@ -12,7 +12,7 @@ heroku clients:create "Localhost Example" http://localhost:5000/auth/heroku/call
 $ cat > .env <<EOF
 HEROKU_OAUTH_ID=     # set to `id` from command output above
 HEROKU_OAUTH_SECRET= # set to `secret` from command output above
-COOKIE_SECRET=cookie-super-secret
+COOKIE_SECRET=change-me
 EOF
 $ bundle install
 $ foreman start
