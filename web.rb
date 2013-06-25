@@ -24,6 +24,11 @@ get "/auth/heroku/callback" do
   redirect "/user"
 end
 
+get "/logout" do
+  session.clear
+  redirect "/"
+end
+
 get "/user" do
   if !session[:heroku_oauth_token]
     redirect("/")
@@ -35,7 +40,7 @@ get "/user" do
     user_email = MultiJson.decode(res.body)["email"]
 
     <<-HTML
-      Hi #{CGI.escapeHTML(user_email)}
+      Hi #{CGI.escapeHTML(user_email)} - <a href='/logout'>Logout</a>
     HTML
   end
 end
