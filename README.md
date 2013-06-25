@@ -25,9 +25,9 @@ $ open http://localhost:5000
 $ heroku create oauth-example-ruby-$USER
 $ heroku plugins:install https://github.com/heroku/heroku-oauth.git
 $ heroku clients:create -s "Ruby OAuth Example ($USER)" https://oauth-example-ruby-$USER.herokuapp.com/auth/heroku/callback
-$ heroku config:add HEROKU_OAUTH_ID=     # set to `id` from command output above
-$ heroku config:add HEROKU_OAUTH_SECRET= # set to `secret` from command output above
-$ heroku config:add COOKIE_SECRET=`dd if=/dev/urandom bs=32 count=1 2>/dev/null | openssl base64`
+$ heroku config:set HEROKU_OAUTH_ID=     # set to `id` from command output above
+$ heroku config:set HEROKU_OAUTH_SECRET= # set to `secret` from command output above
+$ heroku config:set COOKIE_SECRET=`dd if=/dev/urandom bs=32 count=1 2>/dev/null | openssl base64`
 $ git push heroku master
 $ open https://oauth-example-ruby-$USER.herokuapp.com
 ```
