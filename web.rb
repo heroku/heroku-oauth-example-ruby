@@ -19,8 +19,8 @@ get "/" do
 end
 
 get "/auth/heroku/callback" do
-  auth =
-  session[:heroku_oauth_token] =  request.env["omniauth.auth"]["credentials"]["token"]
+  auth = session[:heroku_oauth_token] =
+    request.env["omniauth.auth"]["credentials"]["token"]
   redirect "/user"
 end
 
