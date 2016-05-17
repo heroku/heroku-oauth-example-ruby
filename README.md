@@ -7,7 +7,7 @@ The [OAuth developer documentation](https://devcenter.heroku.com/articles/oauth?
 ## Local Installation
 
 ```
-heroku plugins:install https://github.com/heroku/heroku-oauth.git
+heroku plugins:install heroku-cli-oauth
 heroku clients:create -s "Localhost Example" http://localhost:5000/auth/heroku/callback
 $ cat > .env <<EOF
 HEROKU_OAUTH_ID=     # set to `id` from command output above
@@ -23,7 +23,7 @@ $ open http://localhost:5000
 
 ```
 $ heroku create oauth-example-ruby-$USER
-$ heroku plugins:install https://github.com/heroku/heroku-oauth.git
+$ heroku plugins:install heroku-cli-oauth
 $ heroku clients:create -s "Ruby OAuth Example ($USER)" https://oauth-example-ruby-$USER.herokuapp.com
 $ heroku config:add HEROKU_OAUTH_ID=     # set to `id` from command output above
 $ heroku config:add HEROKU_OAUTH_SECRET= # set to `secret` from command output above
