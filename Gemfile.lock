@@ -27,7 +27,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    rack (1.5.2)
+    rack (1.6.13)
     rack-protection (1.2.0)
       rack
     sinatra (1.3.3)
