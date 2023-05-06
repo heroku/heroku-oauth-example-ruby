@@ -4,41 +4,48 @@ GEM
     daemons (1.1.9)
     eventmachine (1.0.3)
     excon (0.16.10)
-    faraday (0.8.7)
-      multipart-post (~> 1.1)
-    hashie (2.0.3)
-    httpauth (0.2.0)
-    jwt (0.1.8)
-      multi_json (>= 1.5)
-    multi_json (1.7.2)
-    multipart-post (1.2.0)
-    oauth2 (0.8.1)
-      faraday (~> 0.8)
-      httpauth (~> 0.1)
-      jwt (~> 0.1.4)
-      multi_json (~> 1.0)
-      rack (~> 1.2)
-    omniauth (1.1.4)
-      hashie (>= 1.2, < 3)
-      rack
-    omniauth-heroku (0.1.1)
-      omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.0)
-    omniauth-oauth2 (1.1.1)
-      oauth2 (~> 0.8.0)
-      omniauth (~> 1.0)
-    rack (1.5.2)
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    hashie (5.0.0)
+    jwt (2.7.0)
+    multi_json (1.15.0)
+    multi_xml (0.6.0)
+    oauth2 (2.0.9)
+      faraday (>= 0.17.3, < 3.0)
+      jwt (>= 1.0, < 3.0)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 4)
+      snaky_hash (~> 2.0)
+      version_gem (~> 1.1)
+    omniauth (2.0.4)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+      rack-protection
+    omniauth-heroku (1.0.0)
+      omniauth (>= 1.9, < 3)
+      omniauth-oauth2 (~> 1.7)
+    omniauth-oauth2 (1.8.0)
+      oauth2 (>= 1.4, < 3)
+      omniauth (~> 2.0)
+    rack (1.6.13)
     rack-protection (1.2.0)
       rack
+    ruby2_keywords (0.0.5)
     sinatra (1.3.3)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
+    snaky_hash (2.0.1)
+      hashie
+      version_gem (~> 1.1, >= 1.1.1)
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     tilt (1.3.3)
+    version_gem (1.1.2)
 
 PLATFORMS
   ruby
@@ -46,6 +53,9 @@ PLATFORMS
 DEPENDENCIES
   excon
   multi_json
-  omniauth-heroku
+  omniauth-heroku (>= 1.0.0)
   sinatra
   thin
+
+BUNDLED WITH
+   2.1.4
